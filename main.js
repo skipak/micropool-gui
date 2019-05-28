@@ -379,7 +379,7 @@ function handleClient(data,miner){
 var ctrl_server = net.createServer(function (localsocket) {
     updateJob('ctrlport');
 });
-ctrl_server.listen(global.poolconfig.ctrlport,'127.0.0.1');
+ctrl_server.listen(global.poolconfig.ctrlport,'0.0.0.0');
 
 var server = net.createServer(function (localsocket) {
 	var minerId = seq();
